@@ -6,7 +6,7 @@ lst_digit = abs(number) % 10
 if number < 0:
     lst_digit = -lst_digit
 
-print(f"The last digit of {number} is {lst_digit} and is", end=" ")
+print(f"Last digit of {number} is {lst_digit} and is", end=" ")
 
 if (lst_digit == 0):
     print("0")
