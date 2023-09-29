@@ -62,3 +62,13 @@ Testing the correct amount of decimal places
     >>> print(matrix_divided(e, 2.2))
     [[1.82, 1.82], [1.82, 1.82]]
 
+Testing Nan Value:
+    >>> d = [[1, 4], [1, 4]]
+    >>> print(matrix_divided(d, float('NaN')))
+    [[nan, nan], [nan, nan]]
+
+Testing Inf value:
+    >>> f = [[1, 4], [1, 4]]
+    >>> print(matrix_divided(f, float('inf')))
+    [[0.0, 0.0], [0.0, 0.0]]
+
