@@ -45,7 +45,7 @@ Adding a being an Int and b being a String:
 Adding negative numbers:
     >>> print(add_integer(-4, -8))
     -12
-    
+
 Adding a being a String and b being a Int:
     >>> print(add_integer("Holberton", 4))
     Traceback (most recent call last):
@@ -77,4 +77,10 @@ Using the function pasing a None value:
         ...
         raise TypeError('a must be an integer')
     TypeError: a must be an integer
+
+Not passing arguments:
+    >>> print(add_integer())
+    Traceback (most recent call last):
+        File "<stdin>", line 1, in <module>
+    TypeError: add_integer() missing 1 required positional argument: 'a'
 
