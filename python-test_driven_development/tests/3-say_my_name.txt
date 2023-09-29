@@ -9,12 +9,12 @@ Here we're testing say my name.
 First we import the function from the module:
     >>> say_my_name = __import__('3-say_my_name').say_my_name
 
+    >>> say_my_name("Facundo", "Sanchez")
+    My name is Facundo Sanchez
+    
     >>> say_my_name(4, 5)
     Traceback (most recent call last):
     TypeError: first_name must be a string
-
-    >>> say_my_name("Facundo", "Sanchez")
-    Facundo Sanchez
 
     >>> say_my_name("Facundo", 5)
     Traceback (most recent call last):
@@ -28,9 +28,7 @@ First we import the function from the module:
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
-    >>> say_my_name("Facundo")
-    Facundo 
-
     >>> say_my_name()
     Traceback (most recent call last):
     TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
