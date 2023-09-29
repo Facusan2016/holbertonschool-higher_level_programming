@@ -20,14 +20,21 @@ class Square:
 
     def check_and_set_position(self, position):
         """Checks if position is a correct argument and sets it"""
+        msg = "position must be a tuple of 2 positive integers"
         if isinstance(position, tuple) and len(position) == 2:
+
+            if not isinstance(position[0], int):
+                raise TypeError(msg)
+
+            if not isinstance(position[1], int):
+                raise TypeError(msg)
+
             if position[0] >= 0 and position[1] >= 0:
                 self.__position = position
             else:
-                msg = "position must be a tuple of 2 positive integers"
                 raise TypeError(msg)
         else:
-            raise TypeError("position must be a tuple of 2 positive integers")
+            raise TypeError(msg)
 
     def __init__(self, size=0, position=(0, 0)):
         """
