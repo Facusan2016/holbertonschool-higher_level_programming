@@ -50,7 +50,11 @@ class Square:
 
     @property
     def position(self):
-        """Setter method that sets the private attribute __position"""
+        """
+            Setter method that sets the private attribute __position
+            >>> position(1,0)
+
+        """
         return self.__position
 
     @position.setter
@@ -70,7 +74,8 @@ class Square:
             print()
         else:
             if self.__position[1] > 0:
-                print(""*self.__position[1])
+                for _ in range(self.__position[1]):
+                    print()
             for i in range(self.__size):
                 print(" "*self.__position[0], end="")
                 for j in range(self.__size):
