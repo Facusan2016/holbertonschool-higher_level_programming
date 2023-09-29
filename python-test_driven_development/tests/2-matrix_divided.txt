@@ -1,0 +1,64 @@
+The '2-matrix_divided' module
+==========================
+
+Using 'matrix_divided function'
+------------------------------
+
+Here we're testing matrix_divide.
+
+First we import the function from the module:
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Testing if is not a list:
+    >>> a = (1, 2, 3, 4)
+    >>> print(matrix_divided(a, 2))
+    Traceback (most recent call last):
+        ...
+        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Testing if is not a list of lists:
+    >>> a = [1, 2, 3, 4]
+    >>> print(matrix_divided(a, 2))
+    Traceback (most recent call last):
+        ...
+        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+First testing when an input of the matrix is a string:
+    >>> a = [[4,"School"], [4,4]]
+    >>> print(matrix_divided(a, 2))
+    Traceback (most recent call last):
+        ...
+        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Testing if each row has the same size:
+    >>> b = [[1, 2, 3], [1, 2]]
+    >>> print(matrix_divided(b, 2))
+    Traceback (most recent call last):
+        ...
+        raise TypeError('Each row of the matrix must have the same size')
+    TypeError: Each row of the matrix must have the same size
+
+Testing if div is not an Int or a Float:
+    >>> c = [[4, 4], [4, 4]]
+    >>> print(matrix_divided(c, "School"))
+    Traceback (most recent call last):
+        ...
+        raise TypeError('div must be a number')
+    TypeError: div must be a number
+
+Testing if div is 0:
+    >>> d = [[4, 4], [4, 4]]
+    >>> print(matrix_divided(d, 0))
+    Traceback (most recent call last):
+        ...
+        raise ZeroDivisionError('division by zero')
+    ZeroDivisionError: division by zero
+
+Testing the correct amount of decimal places
+    >>> e = [[4, 4], [4, 4]]
+    >>> print(matrix_divided(e, 2.2))
+    [[1.82, 1.82], [1.82, 1.82]]
+
