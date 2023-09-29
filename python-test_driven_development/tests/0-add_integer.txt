@@ -17,6 +17,24 @@ Adding a being float and b being float:
     >>> print(add_integer(2.5, 2.5))
     4
 
+Adding a being float and b being int:
+    >>> print(add_integer(2.5, 2))
+    4
+
+Adding a being int and b being float:
+    >>> print(add_integer(2, 2.5))
+    4
+
+Adding passing three arguments:
+    >>> print(add_integer(2, 5,))
+    7
+
+Adding passing three arguments:
+    >>> print(add_integer(2, 5, 6))
+    Traceback (most recent call last):
+        ...
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
 Adding a being an Int and b being a String:
     >>> print(add_integer(4, "Holberton"))
     Traceback (most recent call last):
@@ -24,6 +42,10 @@ Adding a being an Int and b being a String:
         raise TypeError('b must be an integer')
     TypeError: b must be an integer
 
+Adding negative numbers:
+    >>> print(add_integer(-4, -8))
+    -12
+    
 Adding a being a String and b being a Int:
     >>> print(add_integer("Holberton", 4))
     Traceback (most recent call last):
