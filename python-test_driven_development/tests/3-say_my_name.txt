@@ -1,7 +1,7 @@
-The '3-say_my_name' module
+The ``say_my_name`` module
 ==========================
 
-Using 'say_my_name function'
+Using ``say_my_name(first_name, last_name="")``
 ------------------------------
 
 Here we're testing say my name.
@@ -30,3 +30,7 @@ First we import the function from the module:
 
     >>> say_my_name("Facundo")
     Facundo 
+
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
