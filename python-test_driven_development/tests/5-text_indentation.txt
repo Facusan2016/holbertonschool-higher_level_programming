@@ -18,6 +18,7 @@ Here we're testing text_indentation function.
     Rafael.
     <BLANKLINE>
     Sanchez?
+    
     >>> text_indentation(5)
     Traceback (most recent call last):
     TypeError: text must be a string
