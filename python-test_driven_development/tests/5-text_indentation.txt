@@ -1,0 +1,22 @@
+The ``text_indentation`` module
+==========================
+
+Using ``text_indentation(text)``
+------------------------------
+
+Here we're testing text_indentation function.
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+    >>> text_indentation("""Facundo: Rafael. Sanchez?""")
+    Facundo:
+    <BLANKLINE>
+    Rafael.
+    <BLANKLINE>
+    Sanchez?
+    >>> text_indentation(5)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+    
+    
