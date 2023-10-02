@@ -11,18 +11,19 @@ class Rectangle:
         """
             Initializes the instance of the class
             setting width and height as private attributes.
+
         """
-        self.__width = width
         self.__height = height
+        self.__width = width
 
     @property
     def width(self):
-        """Getter method for __width"""
+        """Getter method for __width that returns """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Setter method for __width"""
+        """Setter method for __width that sets"""
         if not isinstance(value, int):
             raise TypeError('width must be an integer')
 
@@ -32,12 +33,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """Getter method for __height"""
+        """Getter method for __height that returns"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Setter method for __height"""
+        """Setter method for __height that sets"""
         if not isinstance(value, int):
             raise TypeError('height must be an integer')
 
