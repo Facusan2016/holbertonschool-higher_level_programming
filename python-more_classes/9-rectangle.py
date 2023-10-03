@@ -14,8 +14,8 @@ class Rectangle:
             setting width and height as private attributes.
 
         """
-        self.height = height
         self.width = width
+        self.height = height
         type(self).number_of_instances += 1
 
     number_of_instances = 0
