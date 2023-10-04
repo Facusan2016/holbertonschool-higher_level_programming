@@ -4,6 +4,7 @@
 
 """
 
+
 class BaseGeometry():
     """BaseGeometry class that has methods and attributes."""
     def area(self):
@@ -15,7 +16,7 @@ class BaseGeometry():
             Method that validates value checking if it's an
             integer and if it's greater than 0.
         """
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError(f"{name} must be an integer")
 
         if value <= 0:

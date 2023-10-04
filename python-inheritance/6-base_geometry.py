@@ -4,6 +4,7 @@
 
 """
 
+
 class BaseGeometry():
     """BaseGeometry class that has methods and attributes."""
     def area(self):
