@@ -26,6 +26,15 @@ First we import the function from the module:
     >>> my_list.print_sorted()
     [1, 2, 3, 4, 5]
 
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+    >>> print(str(my_list))
+    [1, 4, 2, 3, 5]
+
+    >>> print(repr(my_list))
+    [1, 4, 2, 3, 5]
+    
     >>> my_list.append(-20)
     >>> my_list.print_sorted()
     [-20, 1, 2, 3, 4, 5]
