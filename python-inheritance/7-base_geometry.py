@@ -16,7 +16,7 @@ class BaseGeometry():
             Method that validates value checking if it's an
             integer and if it's greater than 0.
         """
-        if not isinstance(value, int):
+        if not type(value) is int:
             raise TypeError(f"{name} must be an integer")
 
         if value <= 0:
