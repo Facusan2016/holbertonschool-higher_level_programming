@@ -8,4 +8,5 @@ class MyList(list):
     """MyList class definition that inherits form List"""
     def print_sorted(self):
         """Sorts and prints a list."""
-        print(sorted(self))
+        list_copy = self[:]
+        print(sorted(list_copy))
