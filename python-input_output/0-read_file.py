@@ -11,5 +11,5 @@ def read_file(filename=""):
         the content inside it.
     """
     with open(filename, "r", encoding="utf-8") as f:
-        for line in f:
-            print(line)
+        file_content = f.read()
+        print(file_content)
