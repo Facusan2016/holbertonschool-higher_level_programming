@@ -22,6 +22,6 @@ class Student:
             if all(isinstance(item, str) for item in attrs):
                 cls_dict = dict(self.__dict__)
                 filt_dict = {k: v for (k, v) in cls_dict.items() if k in attrs}
-                return str(filt_dict)
+                return filt_dict
 
         return self.__dict__
