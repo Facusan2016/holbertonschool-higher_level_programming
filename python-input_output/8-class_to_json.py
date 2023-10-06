@@ -6,9 +6,7 @@
     integer and boolean) for JSON serialization of an object:
 """
 
-import json
-
 
 def class_to_json(obj):
     """Function that converts class to json"""
-    return json.dumps(dict(obj.__dict__))
+    return obj.__dict__
