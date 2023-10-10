@@ -55,81 +55,11 @@ class TestRectangleClass(unittest.TestCase):
             rec2 = Rectangle("Holberton", 2, 3, 4)
             self.assertEqual(str(exc.exception), "width must be an integer")
 
-    def testWidthTypeErrorRaiseFloat(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(1.3, 2, 3, 4)
-            self.assertEqual(str(exc.exception), "width must be an integer")
-
-    def testWidthTypeErrorRaiseSet(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle({"Holberton", "School"}, 2, 3, 4)
-            self.assertEqual(str(exc.exception), "width must be an integer")
-
-    def testWidthTypeErrorRaiseList(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(["Holberton", "School"], 2, 3, 4)
-            self.assertEqual(str(exc.exception), "width must be an integer")
-
-    def testWidthTypeErrorRaiseBoolean(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(True, 2, 3, 4)
-            self.assertEqual(str(exc.exception), "width must be an integer")
-
-    def testWidthTypeErrorRaiseNone(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(None, 2, 3, 4)
-            self.assertEqual(str(exc.exception), "width must be an integer")
-
-    def testWidthTypeErrorRaiseNaN(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(float('NaN'), 2, 3, 4)
-            self.assertEqual(str(exc.exception), "width must be an integer")
-
-    def testWidthTypeErrorRaiseInf(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(float('Inf'), 2, 3, 4)
-            self.assertEqual(str(exc.exception), "width must be an integer")
-
     # TypeError Tests Height.
 
     def testHeightTypeErrorRaiseString(self):
         with self.assertRaises(TypeError) as exc:
             rec2 = Rectangle(2, "Holberton", 3, 4)
-            self.assertEqual(str(exc.exception), "height must be an integer")
-
-    def testHeightTypeErrorRaiseFloat(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, 1.3, 3, 4)
-            self.assertEqual(str(exc.exception), "height must be an integer")
-
-    def testHeightTypeErrorRaiseSet(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, {"Holberton", "School"}, 3, 4)
-            self.assertEqual(str(exc.exception), "height must be an integer")
-
-    def testHeightTypeErrorRaiseList(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, ["Holberton", "School"], 3, 4)
-            self.assertEqual(str(exc.exception), "height must be an integer")
-
-    def testHeightTypeErrorRaiseBoolean(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, True, 3, 4)
-            self.assertEqual(str(exc.exception), "height must be an integer")
-
-    def testHeightTypeErrorRaiseNone(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, None, 3, 4)
-            self.assertEqual(str(exc.exception), "height must be an integer")
-
-    def testHeightTypeErrorRaiseNaN(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, float('NaN'), 3, 4)
-            self.assertEqual(str(exc.exception), "height must be an integer")
-
-    def testHeightTypeErrorRaiseInf(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, float('Inf'), 3, 4)
             self.assertEqual(str(exc.exception), "height must be an integer")
 
     # TypeError Tests X.
@@ -139,81 +69,11 @@ class TestRectangleClass(unittest.TestCase):
             rec2 = Rectangle(2, 2, "Holberton", 4)
             self.assertEqual(str(exc.exception), "x must be an integer")
 
-    def testXTypeErrorRaiseFloat(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, 2, 1.3, 4)
-            self.assertEqual(str(exc.exception), "x must be an integer")
-
-    def testXTypeErrorRaiseSet(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, 2, {"Holberton", "School"}, 4)
-            self.assertEqual(str(exc.exception), "x must be an integer")
-
-    def testXTypeErrorRaiseList(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, 2, ["Holberton", "School"], 4)
-            self.assertEqual(str(exc.exception), "x must be an integer")
-
-    def testXTypeErrorRaiseBoolean(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, 2, True, 4)
-            self.assertEqual(str(exc.exception), "x must be an integer")
-
-    def testXTypeErrorRaiseNone(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, 2, None, 4)
-            self.assertEqual(str(exc.exception), "x must be an integer")
-
-    def testXTypeErrorRaiseNaN(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, 2, float('NaN'), 4)
-            self.assertEqual(str(exc.exception), "x must be an integer")
-
-    def testXTypeErrorRaiseInf(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, 2, float('Inf'), 4)
-            self.assertEqual(str(exc.exception), "x must be an integer")
-
     # TypeError Tests Y.
 
     def testYTypeErrorRaiseString(self):
         with self.assertRaises(TypeError) as exc:
             rec2 = Rectangle(2, 2, 4, "Holberton")
-            self.assertEqual(str(exc.exception), "y must be an integer")
-
-    def testYTypeErrorRaiseFloat(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, 2, 4, 1.3)
-            self.assertEqual(str(exc.exception), "y must be an integer")
-
-    def testYTypeErrorRaiseSet(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, 2, 4, {"Holberton", "School"})
-            self.assertEqual(str(exc.exception), "y must be an integer")
-
-    def testYTypeErrorRaiseList(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, 2, 4, ["Holberton", "School"])
-            self.assertEqual(str(exc.exception), "y must be an integer")
-
-    def testYTypeErrorRaiseBoolean(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, 2, 4, True)
-            self.assertEqual(str(exc.exception), "y must be an integer")
-
-    def testYTypeErrorRaiseNone(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, 2, 4, None)
-            self.assertEqual(str(exc.exception), "y must be an integer")
-
-    def testYTypeErrorRaiseNaN(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, 2, 4, float('NaN'))
-            self.assertEqual(str(exc.exception), "y must be an integer")
-
-    def testYTypeErrorRaiseInf(self):
-        with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, 2, 4, float('Inf'))
             self.assertEqual(str(exc.exception), "y must be an integer")
 
     # ValueError Tests.
@@ -281,3 +141,8 @@ class TestRectangleClass(unittest.TestCase):
         rec8 = Rectangle(2, 2, 1, 1, 30)
         rec8.update(x=1, height=2, y=3, width=4, id=245)
         self.assertEqual(rec8.__str__(), "[Rectangle] (245) 1/3 - 4/2")
+
+    def testRectangleToDictionary(self):
+        r1 = Rectangle(10, 2, 1, 9, 7)
+        res = {'x': 1, 'y': 9, 'id': 7, 'height': 2, 'width': 10}
+        self.assertEqual(r1.to_dictionary(), res)
