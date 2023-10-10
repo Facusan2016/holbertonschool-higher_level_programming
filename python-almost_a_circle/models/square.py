@@ -22,10 +22,12 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """Size property getter"""
         return self.width
 
     @size.setter
     def size(self, value):
+        """Size property setter"""
         self.width = value
         self.height = value
 
@@ -45,6 +47,7 @@ class Square(Rectangle):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """Square to dictionary implementation"""
         representation = {
             "id": self.id,
             "x": self.x,
