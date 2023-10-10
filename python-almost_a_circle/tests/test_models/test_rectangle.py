@@ -77,7 +77,7 @@ class TestRectangleClass(unittest.TestCase):
 
     def testWidthTypeErrorRaiseNone(self):
         with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(float('None'), 2, 3, 4)
+            rec2 = Rectangle(None, 2, 3, 4)
             self.assertEqual(str(exc.exception), "width must be an integer")
 
     def testWidthTypeErrorRaiseNaN(self):
@@ -119,7 +119,7 @@ class TestRectangleClass(unittest.TestCase):
 
     def testHeightTypeErrorRaiseNone(self):
         with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, float('None'), 3, 4)
+            rec2 = Rectangle(2, None, 3, 4)
             self.assertEqual(str(exc.exception), "height must be an integer")
 
     def testHeightTypeErrorRaiseNaN(self):
@@ -161,7 +161,7 @@ class TestRectangleClass(unittest.TestCase):
 
     def testXTypeErrorRaiseNone(self):
         with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, 2, float('None'), 4)
+            rec2 = Rectangle(2, 2, None, 4)
             self.assertEqual(str(exc.exception), "x must be an integer")
 
     def testXTypeErrorRaiseNaN(self):
@@ -203,7 +203,7 @@ class TestRectangleClass(unittest.TestCase):
 
     def testYTypeErrorRaiseNone(self):
         with self.assertRaises(TypeError) as exc:
-            rec2 = Rectangle(2, 2, 4, float('None'))
+            rec2 = Rectangle(2, 2, 4, None)
             self.assertEqual(str(exc.exception), "y must be an integer")
 
     def testYTypeErrorRaiseNaN(self):
