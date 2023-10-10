@@ -11,6 +11,7 @@ from models.base import Base
 class Rectangle(Base):
     """Declaration of Rectangle class."""
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Init Method"""
         super().__init__(id)
         self.width = width
         self.height = height
@@ -18,6 +19,7 @@ class Rectangle(Base):
         self.y = y
 
     def __str__(self):
+        """Str Method"""
         p_str = f"({self.id}) {self.x}/{self.y}"
         w_str = f"{self.width}/{self.height}"
         return f"[Rectangle] {p_str} - {w_str}"
@@ -98,9 +100,7 @@ class Rectangle(Base):
             print()
 
     def update(self, *args, **kwargs):
-
         """Update the attributtes using args or kwargs."""
-
         if args and len(args) > 0:
 
             opt_args = ["id", "width", "height", "x", "y"]
@@ -113,6 +113,7 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """To dictionary implementation"""
         representation = {
             "x": self.x,
             "y": self.y,
