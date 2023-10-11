@@ -41,6 +41,7 @@ class Base:
                     res.append(obj.to_dictionary())
                 f.write(cls.to_json_string(res))
 
+    @staticmethod
     def from_json_string(json_string):
         """Loads a python object from json string."""
         if json_string is None or len(json_string) == 0:
@@ -54,3 +55,20 @@ class Base:
             new_instance = cls(1, 1)
             new_instance.update(**dictionary)
             return new_instance
+
+    @classmethod
+    def load_from_file(cls):
+        f_name = cls.__name__ + ".json"
+        try:
+            obj_lst = []
+            with open(f_name, "r") as f:
+                for line in f:
+                    dict_obj = cls.from_json_string(line)
+                    for obj in dict_obj:
+                        n_obj = cls.create(**obj)
+                        obj_lst.append(n_obj)
+
+            return obj_lst
+
+        except FileNotFoundError:
+            return ([])
