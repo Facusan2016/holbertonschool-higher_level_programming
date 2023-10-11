@@ -47,3 +47,10 @@ class Base:
             return "[]"
 
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        if cls is not Base:
+            new_instance = cls(1, 1)
+            new_instance.update(**dictionary)
+            return new_instance
