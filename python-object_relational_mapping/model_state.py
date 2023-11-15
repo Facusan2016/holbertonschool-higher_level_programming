@@ -6,10 +6,8 @@
 
 """
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import create_engine, Column, Integer, String
-from sys import argv
+from sqlalchemy import Column, Integer, String
 
-engine = create_engine(f'mysql://{argv[1]}:{argv[2]}@localhost/{argv[2]}')
 Base = declarative_base()
 
 
