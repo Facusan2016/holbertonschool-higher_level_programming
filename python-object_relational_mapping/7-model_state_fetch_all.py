@@ -20,4 +20,4 @@ if __name__ == "__main__":
     states = session.query(State).order_by(State.id).all()
 
     for pos, row in enumerate(states, 1):
-        print(f"{pos}:{row.name}")
+        print(f"{pos}: {row.name}")
