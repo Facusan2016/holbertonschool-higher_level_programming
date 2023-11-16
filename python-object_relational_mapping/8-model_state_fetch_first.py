@@ -21,6 +21,6 @@ if __name__ == "__main__":
     states_row = session.query(State).order_by(State.id).first()
 
     if (not states_row):
-        print("Nothing.")
+        print("Nothing")
     else:
         print(f"{states_row.id}: {states_row.name}")
