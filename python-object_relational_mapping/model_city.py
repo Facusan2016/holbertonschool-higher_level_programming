@@ -9,6 +9,7 @@ from sqlalchemy import Column, Integer, String
 from sqlalchemy import ForeignKey
 from model_state import Base
 
+
 class City(Base):
     """
         Implementation of the city class
@@ -29,7 +30,6 @@ class City(Base):
         nullable=False
     )
 
-    
     state_id = Column(
         Integer,
         ForeignKey('states.id'),
